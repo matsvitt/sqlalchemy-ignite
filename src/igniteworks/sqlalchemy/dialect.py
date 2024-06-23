@@ -226,6 +226,13 @@ class IgniteDialect(DefaultDialect, ABC):
         Retrieving index is not supported by the current implementation
         """
         return []
+    
+    
+    @reflection.cache
+    def has_table(self, connection, table_name, schema, **kw) -> bool:
+        if table_name == "" or table_name is None:
+            return False
+        return table_name in self.get_table_names(connection, schema)        
 
 
 dialect = IgniteDialect
