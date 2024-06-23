@@ -168,6 +168,7 @@ class IgniteDialect(DefaultDialect, ABC):
 
     @reflection.cache
     def get_view_names(self, connection, schema=None, **kw):
+        logging.debug(f"igniteworks://get view names for {schema}")
         return self.get_table_names(connection, schema, **kw)
 
     @reflection.cache
@@ -179,6 +180,7 @@ class IgniteDialect(DefaultDialect, ABC):
 
         The connection object refers to the Cursor object
         """
+        logging.debug(f"igniteworks://get_table_names for {schema}")
         sql = "GET TABLES"
         if schema:
             sql += " FROM " + schema
