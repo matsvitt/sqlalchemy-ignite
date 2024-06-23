@@ -21,7 +21,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="sqlalchemy-ignitex",
-    version="0.5.3",
+    version="0.5.5",
     license="Apache License Version 2.0",
     url="https://github.com/matsvitt/sqlalchemy-ignitex/",
     author="Dr. Matthias Vitt",

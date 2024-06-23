@@ -230,6 +230,7 @@ class IgniteDialect(DefaultDialect, ABC):
     
     @reflection.cache
     def has_table(self, connection, table_name, schema, **kw) -> bool:
+        """check whether a table exists in the schema"""
         if table_name == "" or table_name is None:
             return False
         return table_name in self.get_table_names(connection, schema)        
