@@ -20,12 +20,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="sqlalchemy-ignite",
-    version="0.5.0",
+    name="sqlalchemy-ignitex",
+    version="0.5.1",
     license="Apache License Version 2.0",
-    url="https://github.com/predictiveworks/sqlalchemy-ignite/",
-    author="Dr. Stefan Krusche",
-    author_email="krusche@dr-kruscheundpartner.de",
+    url="https://github.com/matsvitt/sqlalchemy-ignitex/",
+    author="Dr. Matthias Vitt",
+    author_email="matthias.vitt@gmail.com",
     description="SQLAlchemy dialect for Apache Ignite",
     packages=find_packages(where="src"),
     package_dir={'': 'src'},

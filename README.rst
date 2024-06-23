@@ -9,20 +9,14 @@ Installation
 
 The package is installable through PIP::
 
-   pip install sqlalchemy-ignite
+   pip install sqlalchemy-igniteX
 
 Usage
 -----
 
 >>> from sqlalchemy.engine import create_engine
->>> connect_args = {
-        'servers': '127.0.0.1:10800',
-        'timeout': 20.0,
+>>> engine = create_engine("igniteworks://127.0.0.1:10800")
 
-        ... and more connection specific parameters (see Connection object).
-    }
-
->>> engine = engine("ignite://", connect_args = connect_args)
 
 For more advanced access to Apache Ignite, including SSL, please refer
 to the (documented) parameters of the Connection object.
@@ -34,3 +28,4 @@ The dialect can be registered on runtime if you don't want to install it as::
 
 >>>  from sqlalchemy.dialects import registry
 >>>  registry.register("igniteworks", "igniteworks.sqlalchemy.dialect", "dialect")
+
