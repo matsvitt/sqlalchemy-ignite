@@ -165,6 +165,11 @@ class IgniteDialect(DefaultDialect, ABC):
 
         return [row[0] for row in schemas]
 
+
+    @reflection.cache
+    def get_view_names(self, connection, schema=None, **kw):
+        return self.get_table_names(connection, schema, **kw)
+
     @reflection.cache
     def get_table_names(self, connection, schema=None, **kw):
         """
