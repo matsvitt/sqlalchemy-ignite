@@ -9,7 +9,7 @@ Installation
 
 The package is installable through PIP::
 
-   pip install sqlalchemy-igniteX
+   pip install sqlalchemy-ignitex
 
 Usage
 -----
